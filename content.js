@@ -216,8 +216,8 @@ const siteContent = {
             }
         ],
         "modalSliderImages": [
-            "wp-content/uploads/2024/07/IMG-20240527-WA0063.jpg",
-            "wp-content/uploads/2025/11/BED.webp"
+            "Images/Home/IMG-20240527-WA0063.jpg",
+            "Images/Home/BED.webp"
         ],
         "announcementsTitle": "Announcements",
         "announcements": [
@@ -919,119 +919,119 @@ const siteContent = {
         "title": "Gallery",
         "images": [
             {
-                "src": "wp-content/uploads/2024/07/COLLEGE-BUS.jpeg",
+                "src": "Images/Gallery/COLLEGE-BUS-600x800.jpeg",
                 "title": "College Bus"
             },
             {
-                "src": "wp-content/uploads/2024/07/Enquiry-Office.jpeg",
+                "src": "Images/Gallery/Enquiry-Office-600x400.jpeg",
                 "title": "Enquiry Office"
             },
             {
-                "src": "images/Home/about collage.png",
+                "src": "Images/Gallery/about-collage-600x600.png",
                 "title": "About College"
             },
             {
-                "src": "wp-content/uploads/2024/07/COLLEGE-BUS-2.jpeg",
+                "src": "Images/Gallery/COLLEGE-BUS-2-600x450.jpeg",
                 "title": "College Bus 2"
             },
             {
-                "src": "wp-content/uploads/2024/08/WhatsApp-Image-2024-07-24-at-10.48.56.jpeg",
+                "src": "Images/Gallery/college-photo-2-600x400.jpeg",
                 "title": "Campus View"
             },
             {
-                "src": "wp-content/uploads/2024/07/2-WHEELER-PARKING.jpeg",
+                "src": "Images/Gallery/2-WHEELER-PARKING-600x450.jpeg",
                 "title": "2 Wheeler Parking"
             },
             {
-                "src": "wp-content/uploads/2024/07/purified-water-filter.jpeg",
+                "src": "Images/Gallery/purified-water-filter-600x400.jpeg",
                 "title": "Purified Water Filter"
             },
             {
-                "src": "wp-content/uploads/2024/05/Pharmacy.png",
+                "src": "Images/Gallery/Pharmacy.png",
                 "title": "Pharmacy Block"
             },
             {
-                "src": "wp-content/uploads/2024/07/Herbal-Garden-2.jpeg",
+                "src": "Images/Gallery/Herbal-Garden-2-600x450.jpeg",
                 "title": "Herbal Garden 2"
             },
             {
-                "src": "wp-content/uploads/2022/10/home.jpg",
+                "src": "Images/Gallery/home-600x400.jpg",
                 "title": "Home View"
             },
             {
-                "src": "images/Admission/addmision.png",
+                "src": "Images/Gallery/addmision-600x400.png",
                 "title": "Admission Block"
             },
             {
-                "src": "wp-content/uploads/2024/08/WhatsApp-Image-2024-07-24-at-10.48.55-1.jpeg",
+                "src": "Images/Gallery/WhatsApp-Image-2024-07-24-at-10.48.55-1-600x450.jpeg",
                 "title": "Laboratory"
             },
             {
-                "src": "wp-content/uploads/2024/08/WhatsApp-Image-2024-07-24-at-10.48.56-1.jpeg",
+                "src": "Images/Gallery/part-1-theory-class-600x400.jpeg",
                 "title": "Classroom View"
             },
             {
-                "src": "wp-content/uploads/2024/07/college-photo-2.jpeg",
+                "src": "Images/Gallery/college-photo-2-600x400.jpeg",
                 "title": "College Photo 2"
             },
             {
-                "src": "wp-content/uploads/2024/08/WhatsApp-Image-2024-07-24-at-10.48.55.jpeg",
+                "src": "Images/Gallery/WhatsApp-Image-2024-07-24-at-10.48.56-1-600x450.jpeg",
                 "title": "Lab Facilities"
             },
             {
-                "src": "images/Home/slider2.png",
+                "src": "Images/Gallery/slider2-600x237.png",
                 "title": "Banner Slide 2"
             },
             {
-                "src": "wp-content/uploads/2024/07/College-cultural-center.jpeg",
+                "src": "Images/Gallery/College-cultural-center-600x400.jpeg",
                 "title": "Cultural Center"
             },
             {
-                "src": "wp-content/uploads/2024/07/GENERATOR.jpeg",
+                "src": "Images/Gallery/GENERATOR-600x450.jpeg",
                 "title": "Generator Power"
             },
             {
-                "src": "wp-content/uploads/2022/10/effective-supply-chain.jpg",
+                "src": "Images/Gallery/effective-supply-chain.jpg",
                 "title": "Effective Supply Chain"
             },
             {
-                "src": "wp-content/uploads/2024/07/part-1-theory-class.jpeg",
+                "src": "Images/Gallery/part-1-theory-class-600x400.jpeg",
                 "title": "Theory Class"
             },
             {
-                "src": "images/Home/slider1.png",
+                "src": "Images/Gallery/slider1-600x237.png",
                 "title": "Banner Slide 1"
             },
             {
-                "src": "images/Home/way.png",
+                "src": "Images/Gallery/way-600x600.png",
                 "title": "Main Pathway"
             },
             {
-                "src": "wp-content/uploads/2024/07/herbal-Garden-1.jpeg",
+                "src": "Images/Gallery/herbal-Garden-1-600x450.jpeg",
                 "title": "Herbal Garden 1"
             },
             {
-                "src": "wp-content/uploads/2024/07/college-photo.jpeg",
+                "src": "Images/Gallery/college-photo-600x400.jpeg",
                 "title": "College Building"
             },
             {
-                "src": "wp-content/uploads/2024/07/audotorium-hall.jpeg",
+                "src": "Images/Gallery/audotorium-hall-600x400.jpeg",
                 "title": "Auditorium Hall"
             },
             {
-                "src": "wp-content/uploads/2024/07/VEHICLE-PARKING.jpeg",
+                "src": "Images/Gallery/VEHICLE-PARKING-600x450.jpeg",
                 "title": "Vehicle Parking"
             },
             {
-                "src": "wp-content/uploads/2022/10/financial-growth-reporting.jpg",
+                "src": "Images/Gallery/financial-growth-reporting.jpg",
                 "title": "Financial Growth"
             },
             {
-                "src": "wp-content/uploads/2024/07/LADEIS-TOILET.jpeg",
+                "src": "Images/Gallery/LADEIS-TOILET-600x450.jpeg",
                 "title": "Facilities block"
             },
             {
-                "src": "wp-content/uploads/2024/08/WhatsApp-Image-2024-07-24-at-10.48.54.jpeg",
+                "src": "Images/Gallery/WhatsApp-Image-2024-07-24-at-10.48.54-600x450.jpeg",
                 "title": "Main Entrance View"
             }
         ]
