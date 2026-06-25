@@ -1202,8 +1202,8 @@ function initGalleryPage() {
     const grid = document.getElementById('gallery-grid');
     if (grid) {
         grid.innerHTML = siteContent.gallery.images.map((img, idx) => `
-            <div class="group relative bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md cursor-pointer aspect-video" onclick="openLightbox(${idx})">
-                <img id="gallery-img-${idx}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" alt="${img.title}">
+            
+                <img id="gallery-img-${idx}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" alt="${img.title}"<div class="group relative bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md cursor-pointer aspect-video">
                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <h5 class="text-white font-bold font-poppins text-sm truncate w-full">${img.title}</h5>
                 </div>
