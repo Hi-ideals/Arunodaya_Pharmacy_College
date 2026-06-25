@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+body {
+    font-family: 'Mulish', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #0158a5;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0c2b5c;
+}
+
+/* ===================================
+   SCROLL-TRIGGERED ANIMATIONS
+   (Matching Avada's data-animationType)
+   =================================== */
+
+/* Base hidden state for scroll-triggered animations */
+.anim-slideInUp,
+.anim-slideInLeft,
+.anim-slideInRight,
+.anim-revealInLeft,
+.anim-fadeIn,
+.anim-zoomIn {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* slideInUp - Used on: Highlights, Facilities cards, Stats, Announcements */
+.anim-slideInUp {
+    transform: translateY(60px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.anim-slideInUp.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* slideInLeft - Used on: Welcome image, Courses image */
+.anim-slideInLeft {
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.anim-slideInLeft.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* slideInRight - Used on: Welcome text, Courses text */
+.anim-slideInRight {
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.anim-slideInRight.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* revealInLeft - Used on: Placements section */
+.anim-revealInLeft {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-30px);
+    transition: clip-path 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s,
+                opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s,
+                transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+.anim-revealInLeft.animated {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
+}
+
+/* fadeIn - General purpose */
+.anim-fadeIn {
+    transition: opacity 1s ease-in-out;
+}
+.anim-fadeIn.animated {
+    opacity: 1;
+}
+
+/* zoomIn - Used on: Member cards hover */
+.anim-zoomIn {
+    transform: scale(0.85);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.anim-zoomIn.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delay for children in a grid */
+.stagger-1 { transition-delay: 0s; }
+.stagger-2 { transition-delay: 0.15s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.45s; }
+.stagger-5 { transition-delay: 0.6s; }
+.stagger-6 { transition-delay: 0.75s; }
+
+/* ===================================
+   HERO SLIDER with Ken Burns effect
+   =================================== */
+.hero-slider {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 300px;
+    }
+}
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    will-change: opacity, transform;
+}
+.hero-slide.active {
+    opacity: 1;
+    animation: kenBurns 8s ease-in-out forwards;
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+/* ===================================
+   HIGHLIGHTS OVERLAY SECTION
+   =================================== */
+.highlights-overlay {
+    margin-top: -80px;
+    position: relative;
+    z-index: 30;
+}
+@media (max-width: 768px) {
+    .highlights-overlay {
+        margin-top: -40px;
+    }
+}
+
+/* ===================================
+   SECTION TITLES - Match Avada style
+   =================================== */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #0158a5;
+    margin-bottom: 0;
+}
+.section-title-divider {
+    width: 60px;
+    height: 4px;
+    background: #47ba7d;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+.section-title-divider-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================
+   FACILITIES CARDS - Avada gradient style
+   =================================== */
+.facility-card {
+    background: linear-gradient(30deg, #0158a5 0%, #47ba7d 100%);
+    border-radius: 10px;
+    padding: 60px 50px;
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(55px);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.facility-card:hover {
+    transform: translateY(0px);
+}
+.facility-card .facility-icon {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 8px solid rgba(200, 200, 200, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 56px;
+    color: #0158a5;
+    transition: background 0.3s ease;
+}
+.facility-card:hover .facility-icon {
+    background: #23b1e7;
+    color: #ffffff;
+}
+
+/* ===================================
+   WELCOME SECTION - Gradient background with mask
+   =================================== */
+.welcome-bg {
+    background: linear-gradient(180deg, #47ba7d 0%, #0158a5 100%);
+    position: relative;
+    overflow: hidden;
+}
+.welcome-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='1920' height='954' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)' fill='rgba(61,67,109,1)'%3E%3Cpath d='M1321.57 538C1357.08 287.516 1273.7 89.91 1127-.418L1374.18-6c65.77 100.68-15.89 431.512-52.61 544zM312 955c432.242 0 746.77-180.667 850-271-90.34 157.09-176.766 246.121-208.688 271H312z' fill-opacity='.25'/%3E%3Cpath d='M1344.5 427c0-252.4-212.67-390.833-319-428.5H1373c70 82.4 10.17 320-28.5 428.5z' fill-opacity='.1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M839.644 954C1138.37 793.549 1337 508.902 1337 184.5c0-63.218-7.54-124.926-21.9-184.5H1920v954H839.644z' fill-opacity='.5'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h1920v954H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-size: cover;
+    opacity: 0.4;
+    transform: scaleX(-1);
+    mix-blend-mode: normal;
+    pointer-events: none;
+}
+
+/* ===================================
+   MEMBER CARDS - Avada hover zoom
+   =================================== */
+.member-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 40px 0px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.member-card:hover {
+    box-shadow: 2px 2px 40px 0px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+.member-card .member-img-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+}
+.member-card .member-img-wrapper img {
+    transition: transform 0.5s ease;
+}
+.member-card:hover .member-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Member overlay layer (hidden by default, revealed on hover) */
+.member-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: #23b1e7;
+    border-radius: 8px;
+}
+.member-card:hover .member-overlay {
+    opacity: 1;
+}
+
+/* ===================================
+   WHY US SECTION
+   =================================== */
+.why-us-bg {
+    background: #0c2b5c;
+}
+
+/* ===================================
+   ANNOUNCEMENTS VERTICAL TICKER
+   =================================== */
+.ticker-container {
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+.ticker-wrapper {
+    position: absolute;
+    width: 100%;
+    animation: ticker-animation 30s linear infinite;
+}
+.ticker-wrapper:hover {
+    animation-play-state: paused;
+}
+@keyframes ticker-animation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+/* ===================================
+   PLACEMENT LOGOS MARQUEE
+   =================================== */
+.logo-marquee-track {
+    display: flex;
+    gap: 2rem;
+    animation: logoMarquee 25s linear infinite;
+}
+.logo-marquee-track:hover {
+    animation-play-state: paused;
+}
+@keyframes logoMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+/* ===================================
+   SUBMENU DROPDOWN TRANSITIONS
+   =================================== */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* ===================================
+   LIGHTBOX MODAL
+   =================================== */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    transition: transform 0.25s ease;
+}
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* ===================================
+   TABLE STYLES
+   =================================== */
+table {
+    border-collapse: collapse !important;
+}
+th, td {
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* ===================================
+   COURSES SECTION IMAGE
+   =================================== */
+.courses-image-container {
+    border-radius: 0 0 0 25px;
+    overflow: hidden;
+}
+.courses-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* ===================================
+   COUNTER ANIMATION STYLE
+   =================================== */
+.stat-counter {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #0158a5;
+    line-height: 1;
+}
+
+/* ===================================
+   SEPARATOR STYLE (Avada green bar)
+   =================================== */
+.green-separator {
+    width: 60px;
+    height: 4px;
+    background-color: #47ba7d;
+    display: block;
+}
+.green-separator-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   =================================== */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 26px;
+    }
+    .facility-card {
+        padding: 40px 30px;
+        transform: translateY(0);
+    }
+    .stat-counter {
+        font-size: 36px;
+    }
+}
+
+/* ===================================
+   COURSE HERO BANNER
+   =================================== */
+.course-hero-banner {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.course-hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center top;
+}
+@media (max-width: 768px) {
+    .course-hero-banner img {
+        max-height: 260px;
+    }
+}
+
